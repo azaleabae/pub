@@ -1,0 +1,92 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    background-color: #fff;
+}
+a {
+    text-decoration: none;
+}
+
+.skill-progress{
+    width: 500px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.219);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.skill-progress h1{
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: normal;
+    /* h1 태그는 기본적으로 bold가 들어가 있기때문에  꾸며줄때 normal 써줘도 괜찮음*/
+} 
+.item{
+    
+}
+.item p{
+    overflow: hidden;
+    /* 자식요소에 float 속성이 있으면 부모요소는 높이 값을 잃어버린다. 찾는 방법은 overflow: hidden; 이나 height 값을 주는 방법이 있다. */
+    
+    margin-bottom: 5px;
+}
+.item p span:first-child{  
+    /* first-of:nth-of-type(1)()로 써도 상관없음 */
+    float: left;
+}
+.item p span:last-child{
+    float: right;
+}
+.progress{
+    border: 1px solid #6cd4c4; 
+    padding: 5px;
+    border-radius: 3px;
+}
+.progress-level{
+    /* width: 90%; 하나만 할 것이 아니기 때문에 grogress-level에 직접 인라인 스타일로 막대의 차오름 정도를 지정해준다.*/
+    height: 10px;
+    /* background: linear-gradient(방향,시작색상,종료색상); */
+    background: linear-gradient(to right,crimson,gold);
+    /* animation-name: ani;
+    animation-duration: 1s; */
+    /* duration = 지속시간 */
+    animation: ani 1s;
+    animation-fill-mode: both;
+    /* animation-fill-mode = 애니메이션이 100% 상태에 도착하면 0%로 돌아가지 말고 동작을 멈춰라 */
+}
+
+@keyframes ani {
+    0%{
+        width: 0;
+    }
+    /* 시작만 0으로 맞춰놓으면 인라인 스타일때문에 스스로의 width 값을 찾아간다. */
+}
+
+.skill-progress .item:nth-of-type(1) .progress-level{
+    animation-delay: 0s;
+}
+.skill-progress .item:nth-of-type(2) .progress-level{
+    animation-delay: 0.2s;
+}
+.skill-progress .item:nth-of-type(3) .progress-level{
+    animation-delay: 0.4s;
+}
+.skill-progress .item:nth-of-type(4) .progress-level{
+    animation-delay: 0.6s;
+}
+.skill-progress .item:nth-of-type(5) .progress-level{
+    animation-delay: 0.8s;
+}
+/* 위의 예제에서 :nth-child 사용하지 않는 이유는 
+item 하위에 h1태그 마저도 nth-child가 선택해서 순서를 제대로 지정해줄 수 없기 때문이다. 
+이에 반해 :nth-of-type의 경우 원하는 하위 태그의 타입을 선택해줄 수 있다. */

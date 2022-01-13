@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;    
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
+.gnb{}
+.gnb a{
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* 비포와 에프터는 인라인 요소이기 때문에 크기 값을 가질 수 없음 하지만 position: absolute; 를 해주면 인라인 블록 요소로 변함 */
+
+.gnb a:before{
+    content: '';
+    position: absolute;
+    background-color: crimson;
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.gnb a:hover:before{
+    width: 100%;
+}
+
+/* .gnb a:before{
+    content: '';
+    position: absolute;
+    background-color: crimson;
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    transition: 0.5s;
+    right: 0;
+}
+
+.gnb a:hover:before{
+    width: 100%;
+}
+
+.gnb a:before{
+    content: '';
+    position: absolute;
+    background-color: crimson;
+    height: 4px;
+    width: 4px;
+    bottom: 0;
+    transition: 0.5s;
+    left: 0;
+}
+.gnb a:hover:before{
+    left: calc(100% - 4px);
+}
+
+
+.gnb a:before{
+    content: '';
+    position: absolute;
+    background-color: crimson;
+    height: 4px;
+    width: 4px;
+    bottom: 0;
+    transition: 0.5s;
+    left: 0;
+}
+.gnb a:hover:before{
+    left: calc(100% - 4px);
+} */
+
+/* 커지는게 아니라 이동하는 것이기 때문에 
+    width가 아닌 left를 이용
+    left 100% 오른쪽 끝으로 이동하라 빨간 박스의 크기가 4px 이기때문에
+    4px을 빼줌 */
+
+
+/* .gnb a:before{
+    content: '';
+    position: absolute;
+    background-color: crimson;
+    height: 1px;
+    width: 0px;
+    bottom: 0;
+    transition: 0.5s;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.gnb a:hover:before{
+    width: 100%;
+}
+
+.gnb a:before{
+    content: '';
+    position: absolute;
+    background-color: crimson;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    transition: 0.5s;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.gnb a:hover:before{
+    width: 0;
+} */

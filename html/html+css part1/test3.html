@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>제이쿼리 메서드</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        .menu{
+            padding: 0;
+            list-style: none;
+            width: 200px;
+            /* border: 1px solid red; */
+            text-align: center;
+        }
+        .menu li > a {
+            background-color: #000;
+            color: #fff;
+            display: block;
+            padding: 5px;
+            border: 1px solid red;
+        }
+        .sub-menu{
+            border: 1px solid #000;
+        }
+        .sub-menu a {
+            display: block;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <ul>
+        <li>.chlidren() 선택요소의 바로 아래 단계인 자식요소만 선택</li>
+        <li>.sibling() 선택요소의 형제요소 선택</li>
+    </ul>     -->
+
+    <ul class="menu">
+        <li>
+            <a href="#none">menu-1</a>
+            <div class="sub-menu">
+                <a href="#none">sub-1</a>
+                <a href="#none">sub-2</a>
+                <a href="#none">sub-3</a>
+                <a href="#none">sub-4</a>
+            </div>
+        </li>
+
+        <li>
+            <a href="#none">menu-2</a>
+            <div class="sub-menu">
+                <a href="#none">sub-1</a>
+                <a href="#none">sub-2</a>
+                <a href="#none">sub-3</a>
+                <a href="#none">sub-4</a>
+            </div>
+        </li>
+    </ul>
+    
+
+    <script src="/script/jquery-1.12.4.js"></script>
+    <script src="/script/custom3.js"></script>
+</body>
+</html>

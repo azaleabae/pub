@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body{
+    font-family: 'Raleway',sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading {
+    /* border: 1px solid red; */
+    width: 100px;
+    height: 100px;
+    position: relative;
+    /* 부모 */
+}
+.loading span{
+    position: absolute;
+    /* 자식 */
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    animation: loading 3s infinite;
+}
+.loading span:nth-child(1){
+    background-color: crimson;
+}
+.loading span:nth-child(2){
+    animation-delay: 0.8s;
+}
+
+@keyframes loading{
+    0%, 100%{
+        top: 0;
+        left: 0; 
+        /* 한번 레프트로 위치를 잡았으면 left로  */
+    }
+    25%{
+        top: 0;
+        left: calc(100% - 25px);
+        background-color: dodgerblue;
+    }
+    50%{
+        top: calc(100% - 25px);
+        left: calc(100% - 25px);
+        background-color: orange;
+    }
+    75%{
+        top: calc(100% - 25px);
+        left: 0;
+        background-color: yellowgreen;
+    }
+   
+}

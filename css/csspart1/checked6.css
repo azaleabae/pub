@@ -1,0 +1,81 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+}
+
+.tab-inner{
+    border: 1px solid rgb(204, 153, 204);
+    width: 300;
+    height: 300px;
+}
+input[name=tabmenu]{
+    display: none;
+}
+.slide{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.slide-inner{
+    width: 900px;
+    font-size: 0;
+    /* 이미지가 기본적으로 margin 값을 가지고있는데 이럴때 마진 값을 font-size: 0; 으로 삭제해줄 수 있다. */
+    position: absolute;
+    /* 자식요소 포지션 앱솔루트 = 부모요소 높이값 사라짐 -> 부모요소에 높이값 입력 */
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.btn{
+    text-align: center;
+    margin-top: 10px;
+    
+}
+.btn label{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 40%;
+    cursor: pointer;
+    font-size: 7px;
+    color: #fff;
+}
+
+
+input[id=tab1]:checked ~ .slide .slide-inner{
+    /* 인풋중에 id가 tab1인 걸 체크했을때 그 형제요소인 slide 의 자식요소인 slide-inner에 css 속성을 부여해라  */
+    left: 0;   
+}
+input[id=tab2]:checked ~ .slide .slide-inner{
+    left: -300px;   
+}
+input[id=tab3]:checked ~ .slide .slide-inner{
+    left: -600px;   
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3]{
+    background-color: rgb(216, 183, 216);
+}

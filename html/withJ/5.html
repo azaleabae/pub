@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/css/withJ/5.css">
+</head>
+<body>
+    
+    <section>
+        <div class="heading">
+            <h1><span>코딩웍스</span>, 프론트엔드 퍼블리셔 취업을 위한 실전 퍼블리싱 강좌</h1>
+            <input type="text" placeholder="What are you looking for?">
+        </div>
+        <div class="tab-inner">
+            <ul class="btn">
+                <li data-alt="tab1" class="active">HTML</li>
+                <li data-alt="tab2">CSS</li>
+                <li data-alt="tab3">JQUERY</li>
+                <li data-alt="tab4">JAVASCRIPT</li>
+                <li data-alt="tab5">CSS FRAMEWORKS</li>
+            </ul>
+        </div>
+        <div class="tabs">
+            <div id="tab1" class="active">
+                <h2>HTML</h2>
+                <img src="/images/withJ/platform-logo-01.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure maxime ullam odit fuga qui obcaecati cupiditate, culpa in pariatur cumque veniam dolor assumenda veritatis facere ducimus. Asperiores quos, fugit quas porro, enim vel sit minima quia et amet id cumque voluptates dignissimos repudiandae officiis assumenda perferendis, impedit deleniti quae earum iure tempora exercitationem magnam tenetur. Soluta quam rem perspiciatis nulla, ipsum illo eum excepturi blanditiis eaque corrupti vitae, eos sed debitis quos earum natus cumque ipsa ea quae nesciunt enim consequuntur placeat quas accusantium? Perferendis eius, voluptatem voluptas tempore ex officia sunt dolorem totam accusantium. Molestiae sed ex similique.</p>
+            </div>
+
+            <div id="tab2">
+                <h2>CSS3</h2>
+                <img src="/images/withJ/platform-logo-02.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure maxime ullam odit fuga qui obcaecati cupiditate, culpa in pariatur cumque veniam dolor assumenda veritatis facere ducimus. Asperiores quos, fugit quas porro, enim vel sit minima quia et amet id cumque voluptates dignissimos repudiandae officiis assumenda perferendis, impedit deleniti quae earum iure tempora exercitationem magnam tenetur. Soluta quam rem perspiciatis nulla, ipsum illo eum excepturi blanditiis eaque corrupti vitae, eos sed debitis quos earum natus cumque ipsa ea quae nesciunt enim consequuntur placeat quas accusantium? Perferendis eius, voluptatem voluptas tempore ex officia sunt dolorem totam accusantium. Molestiae sed ex similique.</p>
+            </div>
+
+            <div id="tab3">
+                <h2>JQUERY</h2>
+                <img src="/images/withJ/platform-logo-03.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure maxime ullam odit fuga qui obcaecati cupiditate, culpa in pariatur cumque veniam dolor assumenda veritatis facere ducimus. Asperiores quos, fugit quas porro, enim vel sit minima quia et amet id cumque voluptates dignissimos repudiandae officiis assumenda perferendis, impedit deleniti quae earum iure tempora exercitationem magnam tenetur. Soluta quam rem perspiciatis nulla, ipsum illo eum excepturi blanditiis eaque corrupti vitae, eos sed debitis quos earum natus cumque ipsa ea quae nesciunt enim consequuntur placeat quas accusantium? Perferendis eius, voluptatem voluptas tempore ex officia sunt dolorem totam accusantium. Molestiae sed ex similique.</p>
+            </div>
+
+            <div id="tab4">
+                <h2>JAVASCRIPT</h2>
+                <img src="/images/withJ/platform-logo-04.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure maxime ullam odit fuga qui obcaecati cupiditate, culpa in pariatur cumque veniam dolor assumenda veritatis facere ducimus. Asperiores quos, fugit quas porro, enim vel sit minima quia et amet id cumque voluptates dignissimos repudiandae officiis assumenda perferendis, impedit deleniti quae earum iure tempora exercitationem magnam tenetur. Soluta quam rem perspiciatis nulla, ipsum illo eum excepturi blanditiis eaque corrupti vitae, eos sed debitis quos earum natus cumque ipsa ea quae nesciunt enim consequuntur placeat quas accusantium? Perferendis eius, voluptatem voluptas tempore ex officia sunt dolorem totam accusantium. Molestiae sed ex similique.</p>
+            </div>
+
+            <div id="tab5">
+                <h2>CSS FRAMEWORKS</h2>
+                <img src="/images/withJ/platform-logo-05.png">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure maxime ullam odit fuga qui obcaecati cupiditate, culpa in pariatur cumque veniam dolor assumenda veritatis facere ducimus. Asperiores quos, fugit quas porro, enim vel sit minima quia et amet id cumque voluptates dignissimos repudiandae officiis assumenda perferendis, impedit deleniti quae earum iure tempora exercitationem magnam tenetur. Soluta quam rem perspiciatis nulla, ipsum illo eum excepturi blanditiis eaque corrupti vitae, eos sed debitis quos earum natus cumque ipsa ea quae nesciunt enim consequuntur placeat quas accusantium? Perferendis eius, voluptatem voluptas tempore ex officia sunt dolorem totam accusantium. Molestiae sed ex similique.</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        $('.btn li').click(function(){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+
+            var result = $(this).attr('data-alt')
+            $('.tabs div').removeClass('active')
+            $('#' + result).addClass('active')
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opacity 응용</title>
+    <link rel="stylesheet" href="/css/checked5.css">
+</head>
+<body>
+    
+    <div class="tab-inner">
+        <input type="radio" name="tabmenu" id="tab1" checked>
+        <!-- radio 타입은 중복 선택이 불가하다. 
+        최초에 기본적으로 표현될 사진이 필요함으로 tab1에는 checked를 줘서 화면에 이미지가 존재하도록 한다. -->
+        <input type="radio" name="tabmenu" id="tab2">
+        <input type="radio" name="tabmenu" id="tab3">
+        
+        <div class="content slide1">
+            <a href="#none1"><img src="/images/dawi.png" alt=""></a>
+        </div>
+        <div class="content slide2">
+            <a href="#none2"><img src="/images/green.png" alt=""></a>
+        </div>
+        <div class="content slide3">
+            <a href="#none3"><img src="/images/human.png" alt=""></a>
+        </div>
+
+        <div class="heading">
+            <div class="text1">DLC Sale <span>15%</span></div>
+            <div class="text2">DLC Sale <span>25%</span></div>
+            <div class="text3">DLC Sale <span>5%</span></div>
+        </div>
+
+        <div class="btn">
+            <label for="tab1"></label>
+            <label for="tab2"></label>
+            <label for="tab3"></label>
+        </div>
+
+    </div>
+
+</body>
+</html>

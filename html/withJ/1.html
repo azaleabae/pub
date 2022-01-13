@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <link rel="stylesheet" href="/css/withJ/1.css">
+</head>
+<body>
+    
+    <div class="testimonial-section">
+        <h1><span>CodingWorks</span>Publishing Online Class with Inflean</h1>
+        <div class="testimonial-pic">
+            <img class="active" src="/images/withJ/face-01.jpg" data-alt="tab1">
+            <img src="/images/withJ/face-02.jpg" data-alt="tab2"> 
+            <img src="/images/withJ/face-03.jpg" data-alt="tab3">
+            <img src="/images/withJ/face-04.jpg" data-alt="tab4">
+        </div>
+
+        <div class="testimonial">
+            <div class="content active" id="tab1">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quo amet, obcaecati iste a maiores veritatis quis quasi illum nostrum! Rerum autem consequuntur quibusdam aperiam tempora nesciunt sint dignissimos, maiores modi, quasi suscipit hic, quam harum libero cupiditate veniam a tempore voluptate assumenda consectetur molestiae! Et nemo perferendis ad vero rem quo beatae corporis nesciunt iure quis perspiciatis repellat, commodi, ducimus officia temporibus odio amet dolor. Reprehenderit fugiat, magnam porro, unde aliquid voluptatem quis aperiam consequuntur perferendis tempora eveniet modi!</p>
+                <p>Sally, Web Desginer</p>
+            </div>
+            <div class="content" id="tab2">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima excepturi ducimus ipsum tenetur et optio qui quo commodi omnis, adipisci error facere laudantium aliquid consectetur blanditiis amet itaque alias modi. Magni velit et unde blanditiis asperiores nesciunt, saepe iure repellat porro deserunt ut cupiditate sequi voluptate perspiciatis sint architecto pariatur inventore! Ea quibusdam eos itaque, amet et earum, consequatur, voluptatibus eligendi eveniet dicta aliquid soluta. Quidem consequatur totam veniam, accusamus error molestias! Necessitatibus dolor eligendi modi odio veritatis at labore.</p>
+                <p>Amy, Graphic Designer</p>
+            </div>
+            <div class="content" id="tab3">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nesciunt quisquam mollitia labore, et ipsam culpa consequuntur totam. Impedit enim, soluta, voluptatibus architecto pariatur nostrum earum sunt modi ipsum natus velit maxime obcaecati reprehenderit nemo saepe quas cupiditate, temporibus consectetur ex nihil! Odio, qui sint quaerat iste neque debitis eum atque quam ducimus, molestiae numquam repellendus quibusdam impedit sit quos doloremque, ipsam cumque provident officiis. Illum laboriosam voluptates explicabo odit nemo voluptas dolor, aliquam natus, quisquam quidem hic veniam beatae.</p>
+                <p>Jung Ho, Developer</p>
+            </div>
+            <div class="content" id="tab4">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis dolorum, nesciunt vero, fugit dolores ipsa rerum, consequuntur sint sed iure quisquam eaque assumenda ullam molestias expedita officia eos reiciendis error hic quam neque quod? Dolores earum similique nulla, maiores amet reprehenderit ut culpa harum voluptatibus non tenetur reiciendis dolor necessitatibus modi? Ullam explicabo quibusdam quam sed quis praesentium autem fugiat fugit eaque quaerat illum, cupiditate eligendi impedit eius officiis dolorem molestias pariatur quod voluptatum quae eos incidunt tempore. Earum, nobis?</p>
+                <p>Chris, Printing Desinger</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $('.testimonial-pic img').click(function(){
+            $(this).addClass('active')
+            $(this).siblings().removeClass('active')
+            $('.testimonial .content').removeClass('active')
+            $('#' + $(this).attr('data-alt')).addClass('active')
+
+            // #tab1 == $(this).attr('data-alt')
+        })
+    </script>
+</body>
+</html>

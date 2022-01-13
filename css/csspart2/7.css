@@ -1,0 +1,80 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    /* background-image: url(/images/part2/snow-photo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; */
+    /* 고정 역할도 하지만 배경이미지를 넣었을때 가로세로 비율을 무시하고 화면을 가득 채우는 역할도 함 */
+
+    background: url(/images/part2/snow-photo.jpg) no-repeat center center fixed;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(12, 11, 11, 0.562);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* z-index를 해주지 않으면 form요소가 작동이 되질 않음 */
+}
+
+a{
+    text-decoration: none;
+}
+
+.search{
+    /* border: 1px solid #fff; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.search h1{
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.search input[type=text],
+.search input[type=submit]{
+    padding: 20px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+.search input[type=text]{
+    width: 300px;
+    /* border none를 사용하지 않으면 보더 테두리에 음각이 생김 */
+    margin-right: -6px;
+    /* form 요소는 인라인 블럭 요소이기 때문에 저절로 요소와 요소사이에 기본으로 margin이 존재함 그 간격을 메꾸기 위해 search 버튼의 위치를 강제로 이동시켜준다. */
+    border-radius: 40px 0 0 40px;
+    padding-left: 40px;  
+}
+.search input[type=submit]{
+    width: 120px;
+    border-radius: 0 40px 40px 0;
+    cursor: pointer;
+    background-color: orange;
+    color: #fff;
+}
+.search input[type=submit]:hover{
+    background-color: darkgoldenrod;
+}
+.search input[type=text]::placeholder{
+    /* CSS 3부터 생긴 가상클래스는 : 콜론을 두개 써줘야한다. placeholder가 이에 해당 된다 */
+    font-size: 20px;
+    font-style: italic;
+}

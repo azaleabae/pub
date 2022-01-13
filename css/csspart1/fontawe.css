@@ -1,0 +1,78 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+
+.item{
+    /* border: 1px solid red; */
+    width: 300px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.item input{
+    border: 1px solid lightgrey;
+    height: 40px;
+    width: inherit;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    padding-left: 50px;
+    /* 아이콘이 인풋텍스트창을 가리니까 인풋 텍스트창의 위치를 페딩으로 왼쪽부터 오르쪽으로 40px 만큼 띄어 준다 */
+    outline: none;
+    transition: 0.3s;
+}
+.item .fa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: gray;
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: 0.3s;
+    border-radius: 5px 0 0 5px;
+}
+
+.item input:focus{
+    /* 인풋에 클릭이 된다면 자기자신을 어떻게 할것인가 */
+    border: 1px solid dodgerblue;
+    box-shadow: 0 0 5px dodgerblue;
+}
+.item input:focus + .fa{
+    /* 인접선택자 '+' 자신과 가장 가까운 자식요소를 선택 부모요소는 선택할 수 없다.  */
+    background-color: violet;
+}
+
+.item input:focus::placeholder{
+    /* 인풋박스를 클릭했을때 그안에 있는 placeholder를 어떻게 할거냐 */
+    visibility: hidden;
+}
+
+/* 인풋에 padding을 주면 박스가 늘어나니까 꼭 box-sizing:border-box 줄 것 */
+/* focus는 가상클래스 이며 인풋박스를 클릭했을때를 나타낸다. */

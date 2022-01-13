@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+    body{
+    font-family: 'Noto-Sans KR', sans-serif;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5em;
+    font-weight: 300;
+    background-color: #222;
+    margin: 0;
+
+    }
+    a{
+    color: #222;
+    text-decoration: none;
+    }
+    .items{
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        
+        
+    }
+    .item{
+        /* border: 1px solid white; */
+        width: 300px;
+        height: 200px;
+        display: inline-block;
+        position: relative;
+        margin: 10px;
+    }
+    .front,.back{
+        position: absolute;
+        transition: 0.5s;
+        top: 0;
+        width: inherit;
+    }
+    .front{
+        background-color: #333;
+        text-align: center;
+        height: inherit;
+        z-index: 1;
+        
+    }
+    .front img{
+        height: 150px;
+        margin-top: 10px;
+        transform: scale(0.8);
+    }
+    .item:hover .front img{
+        animation: ani 1s linear infinite;
+    }
+    .front h2{
+        margin-top: 0;
+        
+    }
+    
+    .back{
+        background-color: #fff;
+        color: #000;
+        height: inherit;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        opacity: 0;
+    }
+    .back a{
+        background-color: yellowgreen;
+        color: #fff;
+        padding:  5px 20px;
+        /* 값이 두개이면 상하 좌우 */
+        border-radius: 10px;
+        font-size: 13px;
+        
+    }
+    .back a:hover{
+        background-color: #000;
+    }
+    .item:hover .front{
+        /* 아이템에 커서를 올렸을때 프론트의 속성을 정의하겠다. */
+        top: -50%;
+        /* 이상태로는 transition이 먹질 않음 기본적으로 front에 back에 top이라는 속성이 없기때문임 그래서 공통적으로 top속성을 추가해 줘야한다 */
+    }
+    .item:hover .back{
+        top: 50%;
+        opacity: 1;
+    }
+
+    @keyframes ani {
+        0%,100%{
+            transform: scale(0.8);
+        }
+        50%{
+            transform: scale(1.2);
+        }    
+    }

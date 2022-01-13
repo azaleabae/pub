@@ -1,0 +1,89 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    color: #222;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.container {}
+/* Trigger Button */
+input[id=trigger] {
+    display: none;
+}
+label[for=trigger] {
+    /* border: 1px solid red; */
+    width: 40px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.4s;
+}
+label[for=trigger] span {
+    position: absolute;
+    height: 2px;
+    background-color: #000;
+    width: 100%;
+    transition: 0.3s;
+}
+label[for=trigger] span:nth-child(1){
+    top: 0;
+}
+label[for=trigger] span:nth-child(2){
+    top: 50%;
+}
+label[for=trigger] span:nth-child(3){
+    top: 100%;
+}
+
+/* SideBar */
+.sidebar {
+    background-color: #000;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    /* 스크롤하다가도 사이드바를 눌러야 되기때문에 포지션을 fixed로 준다 */
+    right: -300px;
+    transition: 0.4s;
+}
+
+input[id=trigger]:checked + label[for=trigger] 
+span:nth-child(1){
+    /* 인풋박스가 체크되었을 때 가장 근접한 라벨의 첫번째 span태그 의 속성을 지정하겠다. */
+    top: 50%;
+    transform: rotate(45deg);
+}
+input[id=trigger]:checked + label[for=trigger] 
+span:nth-child(2){
+    opacity: 0;
+    /* display: none; */
+}
+input[id=trigger]:checked + label[for=trigger] 
+span:nth-child(3){
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+/*sidebar*/
+
+input[id=trigger]:checked ~ .sidebar {
+    /* 인풋을 눌렀을때 인접해 있는게 아니라
+    형제요소로 존재하기 때문에 인접선택자가 아닌 형제 선택자를 사용한다. */
+    right: 0;
+}
+
+input[id=trigger]:checked + label[for=trigger]{
+    right: 310px;
+    /* 인풋박스를 체크 했을때 인접한 label(햄버거를) 이동시켜라  right를 주는 이유는 사이드바에 햄버거표시가 가려지기 때문*/
+}

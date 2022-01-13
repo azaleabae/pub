@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body{
+    font-family: 'Raleway',sans-serif;
+    /* 고딕체,명조체같은 글자체 */
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    /* 굵기 */
+    display: flex;
+    justify-content: center;
+    /* 메인축쪽으로 정렬 (x축) */
+    align-items: center;
+    height: 100vh;
+}
+
+.loading{}
+.loading span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 50%;
+    animation: loading 1s linear infinite; 
+    /* linear = 부드럽게 
+    infinite = 무한반복 */
+}
+.loading span:nth-child(1){
+    animation-delay: 0s;
+    background-color: crimson;
+}
+.loading span:nth-child(2){
+    animation-delay: 0.2s;
+    background-color: dodgerblue;
+}
+.loading span:nth-child(3){
+    animation-delay: 0.4s;
+    background-color: blue;
+}
+
+@keyframes loading{
+    /* 애니메이션의 중간의 특정 지점들에 속성부여 */
+    0%{
+        opacity: 0;
+        /* 불투명도 0에 가까울수록 투명해짐 */
+        transform: scale(0.5);
+        /* 요소의 확대나 축소에 사용하는 
+        1보다 높으면 확대 1보다 작은수는 축소 */
+    }
+    50%{
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}

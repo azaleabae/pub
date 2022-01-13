@@ -1,0 +1,105 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #222;
+    line-height: 1.6em;
+    background-color: #f4f4f4;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+section{
+    width: 800px;
+}
+.tab-inner{}
+.btn{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.btn li{
+    float: left;
+    /* border: 1px solid #000; */
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #eee;
+    border-right: 1px solid #ddd;
+    padding: 5px;
+    border-top: 2px solid transparent;
+}
+.btn li:last-child{
+    width: 170px;
+    border-right:   none;
+}
+.btn li:hover,
+.btn li.active{
+    background-color: #fff;
+    border-top: 2px solid crimson;
+}
+
+.tabs{}
+.tabs div{
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: none;
+}
+.tabs div.active{
+    display: block;
+}
+/* Tab Content */
+.tabs div h2{
+    text-align: center;  
+}
+.tabs div img{
+    float: left;
+    margin-right: 10px;
+}
+.tabs div p{
+    overflow: hidden;
+    /* 이미지 아래 딸려오는 p 태그의 글들을 옆으로 밀어줌 */
+}
+
+/* Heading*/
+.heading{
+    margin-bottom: 30px;
+}
+.heading h1{
+    font-size: 30px;
+    text-align: center;
+}
+.heading h1 span{
+    color: crimson;
+}
+.heading input[type=text]{
+    background-color: #fff;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid #ddd;
+    background: url(/images/withJ/search-icon.png) no-repeat center left 5px;
+    /* 이미지를 수평 중앙 수직에서는 왼쪽에 붙이돼 5px 떨어진 만큼 붙여라  */
+    background-size: 23px;
+    padding-left: 35px;
+}
+.heading input[type=text]::placeholder{
+    font-style: italic;
+    transition: .5s;
+}
+
+.heading input[type=text]:focus::placeholder{
+    /* display: none; */
+    /* placeholder는 display: none; 으로 없앨 수 없음 */
+    /* visibility: hidden; */
+    /* display,visibility로는 transition을 줄수 없음 */
+    opacity: 0;
+}

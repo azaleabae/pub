@@ -1,0 +1,73 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.5em;
+    margin: 0;
+    font-weight: 300;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+img{
+    
+}
+
+
+.tab-inner{
+    /* border: 1px solid red; */
+    width: 255px;
+    height: 300px;
+    position: relative;
+    /* 버튼을 탭이너라는 div에 집어넣을거니까
+    부모요소추가 */
+}
+input[name=tabmenu]{
+    display: none;
+}
+.content{
+    display: none;
+}
+.btn{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10;
+    
+}
+.btn label{
+    background-color: lightgray;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+}
+input[id=tab1]:checked ~ .slide1{
+    display: block;
+}
+input[id=tab2]:checked ~ .slide2{
+    display: block;
+}
+input[id=tab3]:checked ~ .slide3{
+    display: block;
+}
+
+
+input[id=tab1]:checked ~ .btn label[for=tab1]{
+    background-color: crimson;
+}
+input[id=tab2]:checked ~ .btn label[for=tab2]{
+    background-color: crimson;
+}
+input[id=tab3]:checked ~ .btn label[for=tab3]{
+    background-color: crimson;
+}

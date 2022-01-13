@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="/css/withJ/6.css">
+</head>
+<body>
+    
+    <div class="container">
+        <ul class="navi">
+            <li data-image="/images/withJ/back1.png"><a href="#none" data-text="ABOUT">ABOUT</a></li>
+            <li data-image="/images/withJ/back2.png"><a href="#none" data-text="INSTRUCTOR">INSTRUCTOR</a></li>
+            <li data-image="/images/withJ/back3.png"><a href="#none" data-text="CLASS">CLASS</a></li>
+            <li data-image="/images/withJ/back4.png"><a href="#none" data-text="LOCATION">LOCATION</a></li>
+        </ul>
+        <div class="photo"></div>
+    </div>
+    
+
+    <script>
+        $('.navi li').mouseenter(function(){
+            var total = $(this).attr('data-image')
+            $('.photo').css({
+                'background-image': 'url('+ total +')'
+            })
+        })
+        $('.navi li').mouseleave(function(){
+            $('.photo').css({
+                'background-image': ''
+            })
+        })
+    </script>
+
+</body>
+</html>
