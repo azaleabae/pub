@@ -1,0 +1,28 @@
+header h1{
+  font-size: 32px;
+  color: bisque;
+  padding-bottom: 15px;
+  margin: 0;
+  background-color: rgb(233, 196, 230);;
+  text-align: center;
+}
+.atag{
+  margin: 1px;
+  height: 34vh;
+  width:  100%;
+  background-color: rgb(233, 196, 230);
+  list-style: none;
+  padding-left: 5px;
+}
+.atag li a{
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.atag a:hover{
+  transition: 1.5s;
+  color: rgb(240, 148, 224);
+}

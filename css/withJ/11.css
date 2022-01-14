@@ -140,6 +140,7 @@ a{
 }
 .trigger span{
     position: absolute;
+    /* 부모요소의 포지션 속성이 absolute면 자식 속성이 absolute일 경우에 그 부모속성은 relative를 따로 입력해 주지 않아도 됨 */
     width: 100%;
     height: 1px;
     background-color: #000;
@@ -176,6 +177,7 @@ a{
     position: absolute;
     background-color: #000;
     height: 100vh;
+    /* 부모요소의 높이값과 상관없이 자식요소가 화면을 꽉 채우려면 100vh를 쓰면됌 vh는 화면을 백분할한 값 */
     top: 0;
     left: 0;
     width: 100%;

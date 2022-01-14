@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <audio id="music" src="/images/withJ/piano-bgm.mp3" loop>
+    <audio id="music" src="/images/withJ/piano-bgm.mp3" autoplay loop>
     </audio>
 
     <script>
@@ -59,16 +59,15 @@
             $('.modal-gnb').fadeToggle(1000)
             // fade in out을 토글 처럼 쓸때 fadeToggle을 쓴다.
 
-            
             // .fadeIn() : 실행시 숨겨진 요소를 나타나게 한다.
             // .fadeOut() : 실행시 요소를 사라지게 한다.
             // .fadeToggle() : 실행시 fadeIn() 메소드와 fadeOut() 메소드를 번갈아 가면서 적용한다.
             // .fadeTo() : fade 효과에서 사용하는 opacity 속성값을 직접 설정한다.
 
-            // Audio Controls
-            var bgm = document.getElementById('music')
-            bgm.volume = 0.1 //Audio volume : 0~1
         })
+        // Audio Controls
+        var bgm = document.getElementById('music')
+        bgm.volume = 0 //Audio volume : 0~1
     </script>
 
 </body>
