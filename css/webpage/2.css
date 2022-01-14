@@ -1,0 +1,114 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  background-color: #eee;
+  font-size: 15px;
+  color: #222;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.container{}
+header{
+  border-bottom: 1px solid lightgray;
+  background-color: #fff;
+  height: 60px;
+  text-align: center;
+  padding-top: 13px;
+  box-sizing: border-box;
+}
+section{
+  border: 1px solid red;
+  height: calc(100vh - 60px);
+  /* calc로 사칙연산
+  100vh-60px 은 헤더의 높이값을 빼준것 안하면 스크롤이 생긴다. */
+  position: relative;
+
+}
+.login{
+  position: absolute;
+  /* border: 1px solid red; */
+  width: 360px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.login-type{}
+.login-type h1{
+  margin-top: 0;
+  font-size: 38px;
+  text-align: center;
+  font-weight: normal;
+}
+.btn{
+  border: 1px solid lightgray;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  /* 버튼이나 a태그는 padding으로 높이값 조절하는걸 추천 */
+  border-radius: 3px;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+.btn:hover{
+  opacity: 1;
+}
+.btn:nth-of-type(1){
+  color: #222;
+  background: url(/images/webpage/logo-mobile.png) #fff no-repeat center left 10px;
+}
+.btn:nth-of-type(2){
+  color: #fff;
+  background:  url(/images/webpage/logo-email.png) #898c9b no-repeat center left 10px;
+}
+.btn:nth-of-type(3){
+  color: #fff;
+  background: url(/images/webpage/logo-naver.png) #11ce00 no-repeat center left 10px;
+}
+.btn:nth-of-type(4){
+  color: #fff;
+  background:  url(/images/webpage/logo-facebook.png) #0076fe no-repeat center left 10px;
+}
+.btn:nth-of-type(5){
+  color: #fff;
+  background:  url(/images/webpage/logo-line.png) #00C026 no-repeat center left 10px;
+  
+}
+.or-text{
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+.or-text::before,
+.or-text::after{
+  content:'';
+  background-color: lightgray;
+  height: 1px;
+  width: 44%;
+  position: absolute;
+  top: 9px;
+}
+.or-text::before{
+  left: 0;
+}
+.or-text::after{
+  right: 0;  
+}
+
+.login-footer p{
+  text-align: center;
+}
+.login-footer p a{
+  font-weight: normal;
+}
+.login-footer p a:hover{
+  text-decoration: underline;
+}

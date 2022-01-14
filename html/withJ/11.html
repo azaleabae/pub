@@ -33,7 +33,43 @@
         <div class="anniversarr">
             <em>Anniversary</em><span>60</span>
         </div>
+        <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal-gnb">
+            <div class="gnb">
+                <a href="#none">쇼군 토탈워</a>
+                <a href="#none">워해머 토탈워</a>
+                <a href="#none">삼국 토탈워</a>
+                <a href="#none">아틸라 토탈워</a>
+                <a href="#none">미디블 토탈워</a>
+            </div>
+        </div>
     </div>
+
+    <audio id="music" src="/images/withJ/piano-bgm.mp3" loop>
+    </audio>
+
+    <script>
+        // Triger
+        $('.trigger').click(function(){
+            $(this).toggleClass('active')
+            $('.modal-gnb').fadeToggle(1000)
+            // fade in out을 토글 처럼 쓸때 fadeToggle을 쓴다.
+
+            
+            // .fadeIn() : 실행시 숨겨진 요소를 나타나게 한다.
+            // .fadeOut() : 실행시 요소를 사라지게 한다.
+            // .fadeToggle() : 실행시 fadeIn() 메소드와 fadeOut() 메소드를 번갈아 가면서 적용한다.
+            // .fadeTo() : fade 효과에서 사용하는 opacity 속성값을 직접 설정한다.
+
+            // Audio Controls
+            var bgm = document.getElementById('music')
+            bgm.volume = 0.1 //Audio volume : 0~1
+        })
+    </script>
 
 </body>
 </html>
