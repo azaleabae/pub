@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display속성의 이해도</title>
+  <style>
+    body{
+
+    }
+    span{
+      border: 1px solid #000;
+      width: 400px; height: 400px;
+      margin: 20px;
+    }
+    div{
+      border: 1px solid red;
+      margin: 20px;
+      width: 300px;
+      height: 50px;
+    }
+    img{
+      margin: 20px;
+      width: 300px;
+      height: 300px;
+    }
+    h1{
+      border: 1px solid blue;
+      display: inline-block;
+    }
+    .testdiv{
+      border: 1px solid #000;
+      position: absolute;
+      left: 50%;
+      top: 80%;
+  
+    }
+    #testh1{
+      position: absolute;
+    }
+    #testh1::before{
+      content: 'new';
+      color: red;
+      left: 0;
+      /* width: 100px; */
+      /* height: 100px; */
+      /* 인라인 요소라 크기 값을 줄 수 없음 */
+      margin: 20;
+      position: absolute;
+      /* 인라인 블럭으로 바뀜 */
+      width: 30px;
+      height: 30px;
+    }
+    #testh1::after{
+      content: 'hot';
+      color: blue;
+      right: 0;
+    }
+  </style>
+</head>
+<body>
+  <span>Inline Element</span>
+  <span>Inline Element</span>
+  <span>Inline Element</span>
+
+  <div>Block Element1</div>
+  <div>Block Element2</div>
+
+  <img src="/images/jumpup/picture-01.jpg">
+  <img src="/images/jumpup/picture-01.jpg">
+
+  <h1>Block Element</h1>
+
+  <div class="testdiv">
+    div tag
+    <h1 id="testh1">Headline-text</h1>
+  </div>
+
+  
+</body>
+</html>

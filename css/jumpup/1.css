@@ -1,28 +1,45 @@
 header h1{
   font-size: 32px;
-  color: bisque;
+  color: rgb(247, 187, 114);
   padding-bottom: 15px;
   margin: 0;
-  background-color: rgb(233, 196, 230);;
+  background-color: rgb(231, 154, 231);
   text-align: center;
 }
 .atag{
   margin: 1px;
-  height: 34vh;
+  height: 100%;
   width:  100%;
-  background-color: rgb(233, 196, 230);
+  background-color: rgb(233, 152, 233);
   list-style: none;
   padding-left: 5px;
 }
+
+.atag li{
+
+}
 .atag li a{
+  height: 20px;
+  width: 20px;
   text-decoration: none;
   font-weight: bold;
   font-size: 20px;
   color: #fff;
   text-transform: uppercase;
 }
+span{
+  padding-left: 15px;
+  font-size: 13px;
+  color: #fff;
+  opacity: 0;
+  transition: 0.3s;
+}
 
 .atag a:hover{
   transition: 1.5s;
   color: rgb(240, 148, 224);
 }
+.atag a:hover + span{
+  opacity: 1;
+}
+

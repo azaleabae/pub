@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폰트 사이즈 px em rem</title>
+</head>
+
+<style>
+  html{
+    font-size: 5px;
+  }
+  body{
+    font-size: 10px;
+  }
+  .box-em{
+    font-size: 2em;
+    line-height: 2em;
+    /* 보통 line-height에 많이 씀 폰트 사이즈를 바꿀때 마다 line-height 를 다시 설정해주지 않아도 되기 때문 */
+  }
+  .box-em span{
+    font-size: 2em;
+  }
+  .box-rem{
+    font-size: 2rem;
+    /* 반응형 웹페이지 제작시에 많이 씀 */
+  }
+</style>
+<body>
+  
+  <div class="container">
+    <header>
+      <h1>포오온트 사이즈</h1>
+      <p>px | em | rem</p>
+    </header>
+    <section>
+      <div class="box-em">
+        <h1>em</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro necessitatibus veritatis debitis sint rerum iste eligendi nemo consequuntur consequatur explicabo ex hic asperiores ad, aspernatur doloribus nulla et, nobis rem soluta labore nihil eos! Nobis molestiae magni necessitatibus enim ut numquam aliquid suscipit similique iure. Quas, nostrum! Delectus inventore nobis est iure aut quisquam dolorum dolorem ducimus et. Soluta eveniet facere voluptate dolore totam ad sunt, hic pariatur, atque iusto assumenda asperiores, labore dolorum fuga nobis! Voluptates odio quod impedit maiores pariatur. Ut minima harum optio, ab, in facilis delectus impedit ratione esse dicta necessitatibus quia. <span>Quas fugit ex doloribus!</span>
+        </p>
+      </div>
+      <div class="box-rem">
+        <h1>rem</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, qui ipsam consectetur adipisci ab dolores. Dolores id enim, ducimus accusantium sequi cum temporibus laboriosam. Ipsum deleniti ipsa consequatur mollitia impedit fugiat suscipit quas dolorum? Deserunt illum corrupti accusamus porro, ipsam expedita exercitationem, ea reprehenderit voluptate quas sapiente ducimus incidunt. Numquam consectetur sit a sapiente adipisci incidunt perspiciatis quo debitis, minima qui placeat laborum facilis architecto iure eveniet quis ducimus, corporis sed cumque autem vero. Laboriosam accusamus, possimus qui, ullam iste voluptatibus dolore nulla ipsa aspernatur expedita voluptate odit recusandae inventore itaque rerum cupiditate? Repellendus sequi culpa accusantium quos totam ex.
+        </p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>

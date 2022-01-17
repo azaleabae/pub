@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>확장선택자-이론예제</title>
+  <style>
+    input[id=trigger]{
+      display: none;
+      /* 속성선택자 */
+      /* 인풋속성중에 trigger라는 아이디를 가진 친구를 display none 하겠다. */
+    }
+    label[for=trigger]{
+      /* border: 1px solid red; */
+      width: 30px;
+      height: 25px;
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      cursor: pointer;
+      transition: 0.5s;
+    }
+    label[for=trigger] span{
+      display: block;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      transition: 0.3s;
+      z-index: 1;
+    }
+    label[for=trigger] span:nth-child(1) {
+      top: 0;
+    }
+    label[for=trigger] span:nth-child(2) {
+      top: 50%;
+    }
+    label[for=trigger] span:nth-child(3) {
+      top: 100%;
+    }
+    input[id=trigger]:checked + label span:nth-child(1){
+      top: 50%;
+      transform: rotate(45deg);
+    }
+    input[id=trigger]:checked + label span:nth-child(2){
+      opacity: 0;
+    }
+    input[id=trigger]:checked + label span:nth-child(3){
+      top: 50%;
+      transform: rotate(-45deg);
+    }
+    .sidebar{
+      width: 250px;
+      height: 100vh;
+      background-color: pink;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      transition: 0.5s;
+    }
+    input[id=trigger]:checked ~ .sidebar{
+      left: 0;
+    }
+    input[id=trigger]:checked + label{
+      left: 220px;
+    }
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="trigger">
+    <!-- 인풋은 보이지 않지만 trigger 실행시 라벨이 대신 받아서 실행 -->
+    <label for="trigger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="sidebar"></div>
+  </div>
+
+</body>
+</html>
