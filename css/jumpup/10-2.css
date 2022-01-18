@@ -1,0 +1,20 @@
+body{
+  margin: 0;
+  background-color: crimson;
+}
+
+.container{
+  background-color: yellowgreen;  
+  /* width: calc(1000px - calc(200px + 100px));
+  calc는 중첩 사용가능 다시한번 말하지만 연산자 좌우는 띄어쓰기 해줘야함
+  height: 200px; */
+
+  height: calc(100vh - 40px);
+  width: calc(100% - 40px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}

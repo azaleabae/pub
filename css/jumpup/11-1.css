@@ -1,0 +1,9 @@
+.parent{
+  /* border: 5px solid #000; */
+  --pwidth: 300px;
+  /* 대쉬두개( -- ) 를 앞에 붙여주면 변수가 된다. */
+  width: calc(var(--pwidth) * 2);
+  height: 100px;
+  margin: auto;
+  background-color: crimson;
+}

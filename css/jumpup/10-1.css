@@ -1,0 +1,30 @@
+.container{
+  border: 5px solid #000;
+  height: 200px;
+  background-color: yellowgreen;
+  /* width: 100%- 100px; 이렇게 하면 css 인식을 못함 */
+  width: calc(100% - 120px);
+  /* 연산식의 좌우는 꼭 띄어 줘야한다. */
+  margin: auto;
+  overflow: hidden;
+}
+
+.parent{
+  border: 2px solid #000;
+  width: 800px;
+  margin: 10px;
+}
+.child{
+  height: 200px;
+  width: calc(800px / 3);
+  float: left;
+}
+.child:nth-child(1){
+  background-color: crimson;
+}
+.child:nth-child(2){
+  background-color: royalblue;
+}
+.child:nth-child(3){
+  background-color: yellow;
+}

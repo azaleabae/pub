@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 애니메이션 모달</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="/css/jumpup/14-1.css">
+
+  <script>
+
+    $('.btn-open').click(function(){
+      $('.modal, overlay').addClass('active')
+      /*현재는 overlay가 btn을 감싸고 있기 때문에 눌러도 반응이 없음*/
+    })
+
+  </script>
+
+</head>
+<body>
+  <button class="btn-open">뉴스레터 구독하기</button>
+  <div class="modal">
+    <div class="modal-content">
+      <div class="photo"></div>
+      <div class="desc">
+        <div class="desc-header">
+          <h2>지금 다양한 해택 받으실?</h2>
+          <button class="btn-close">&times;</button>
+        </div>
+        <div class="desc-content">
+          <input type="email" placeholder="이메일 주소를 입력">
+          <button>뉴스레터 구독하기</button>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At nobis placeat repudiandae quaerat distinctio omnis aliquid qui eos velit rerum, nemo corporis ratione! Amet sint nulla tempora, voluptate deleniti eos?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay">
+
+  </div>
+
+</body>
+</html>

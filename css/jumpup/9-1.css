@@ -1,0 +1,13 @@
+.parent{
+  border: 1px solid #000;
+  width: 400px;
+  height: 200px;
+  background-color: yellowgreen;
+  color: red;
+}
+.child{
+  border: 5px solid blue;
+  width: inherit;
+  height: inherit;
+  /* 자식요소에서 높이 값을 고정으로 넣어주면 부모요소에 변화가 생겼을때 마다 고쳐줘야한다. 그래서 보통 inherit을 씀 */
+}

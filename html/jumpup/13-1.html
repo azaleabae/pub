@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 맵</title>
+  <!-- 하나의 이미지에 여러개의 링크를 걸어야 하거나 특정 좌표에만 링크를 걸어야할 때 사용 -->
+</head>
+<body>
+  
+  <img src="/images/part1/human.png" usemap="#download"> 
+  <map name="download">
+    <!-- usemap id와 map name 을 페어링 시켜준다. -->
+    <area shape="rectangle" coords="59,180,186,224" href="" title="다운로드 기간: 12월 31일 까지">
+    사격형 좌표값: 좌상단, 우하단 
+  </map>
+
+  <img src="/images/jumpup/iconsArray.png" usemap="#list">
+  <map name="list">
+    <area shape="circle" coords="63,64,48" href="" title="크롬">
+    <area shape="circle" coords="186,64,48" href="" title="파이어폭스">
+    <area shape="circle" coords="315,64,48" href="" title="나침반">
+    <area shape="circle" coords="436,64,48" href="" title="익스플로러">
+    <area shape="circle" coords="557,64,48" href="" title="오페라">
+    <!-- 원형 좌표값: 원 중앙, 반지름
+    도구로 만드려면 구글에 image map generator로 검색 -->
+
+  </map>
+
+</body>
+</html>

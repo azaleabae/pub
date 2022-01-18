@@ -1,0 +1,27 @@
+:root{
+  --primary: royalblue;
+  --secondary: black;
+  --positive: yellowgreen;
+  --negative: crimson;
+}
+
+.btn{
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.btn.primary{
+  background-color: var(--primary);
+  /* background-color: skyblue; 가령 이런식으로 입력해줬다면 변경사항 발생시 일일이 하나씩 바꿔줘야함 하지만 변수로 선언하면 변수 값만 바꿔주면 된다.*/
+}
+.btn.secondary{
+  background-color: var(--secondary);
+}
+.btn.positive{
+  background-color: var(--positive);
+}
+.btn.negative{
+  background-color: var(--negative);
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* Fontawesome 4.7 */
+    @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+    
+    .breadcrumb a{
+      color: #000;
+      text-decoration: none;
+    }
+    .breadcrumb a:after{
+      content: '\f105';
+      font-family: 'fontawesome';
+      margin-left: 5px;
+    }
+    .breadcrumb a:last-child{
+      content: '';
+    }
+
+    /* :before 와 ::before는 동일한 역할을 수행하지만
+    콜론이 하나인 것은 css2버전이고 css3는 클론이 두개이다.
+    css버전3과 같이 등장 하거나 그 이후에 생성된 가상클래스들은 무조건 콜론을 두개 써줘야한다. */
+
+  </style>
+</head>
+<body>
+  
+  <div class="breadcrumb">
+    <a href="">홈</a>
+    <a href="">전체메뉴</a>
+    <a href="">사각도시락</a>
+    <a href="">모둠시리즈</a>
+  </div>
+
+</body>
+</html>
