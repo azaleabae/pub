@@ -10,13 +10,14 @@ body{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -90%) scale(0.6);
   z-index: 1;
   opacity: 0;
   transition: .5s;
 }
 .modal.active{
   opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 .modal-content{
   /* border: 1px solid royalblue; */
@@ -50,10 +51,15 @@ body{
   left: 0%;
   opacity: 0;
   transition: 0.5s;
-  
+  /* pointer-events: none; */
+  /* 오버레이가 존재하며 그게 뉴스레터 구독하기 위에 존재하고 있음 그래서 버튼이 눌리지 않는데 
+  마우스 클릭을 받지 않겠다는 속성인 pointer-events: none;을 작성하면 z값에 상관없이 뒤에있는 버튼을 클릭할 수 있게 됨 */
+  visibility: hidden;
 }
 .overlay.active{
   opacity: 1;
+  /* pointer-events:all; */
+  visibility: visible;
 }
 .btn-close{
   position: absolute;
@@ -64,6 +70,7 @@ body{
   color: #999;
   font-size: 30px;
   cursor: pointer;
+  outline: none;
 }
 .btn-close:hover{
   color: #000;

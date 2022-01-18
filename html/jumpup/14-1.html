@@ -8,14 +8,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <link rel="stylesheet" href="/css/jumpup/14-1.css">
 
-  <script>
-
-    $('.btn-open').click(function(){
-      $('.modal, overlay').addClass('active')
-      /*현재는 overlay가 btn을 감싸고 있기 때문에 눌러도 반응이 없음*/
-    })
-
-  </script>
+  
 
 </head>
 <body>
@@ -41,6 +34,18 @@
   <div class="overlay">
 
   </div>
+  <script>
+
+    $('.btn-open').click(function(){
+      $('.modal, .overlay').addClass('active')
+      /*현재는 overlay가 btn을 감싸고 있기 때문에 눌러도 반응이 없음 -> overlay에 pointer-events 속성을 none으로 */
+    })
+    $('.btn-close, .overlay').click(function(){
+      $('.modal, .overlay').removeClass('active')
+    })
+
+  </script>
+
 
 </body>
 </html>
