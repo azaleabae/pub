@@ -2,7 +2,7 @@
   border: 5px solid #000;
   height: 200px;
   background-color: yellowgreen;
-  /* width: 100%- 100px; 이렇게 하면 css 인식을 못함 */
+  /* width: 100% - 100px; 이렇게 하면 css 인식을 못함 */
   width: calc(100% - 120px);
   /* 연산식의 좌우는 꼭 띄어 줘야한다. */
   margin: auto;
