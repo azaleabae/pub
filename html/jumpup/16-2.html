@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플러그인 콘텐츠 슬라이더2</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- swipe.js / bs.js / slick.js -->
+  
+  
+  <!-- Slick.js 파일 다운받고 연결하기 -->
+  <link rel="stylesheet" href="/slick/slick-theme.css">
+  <link rel="stylesheet" href="/slick/slick.css">
+  <script src="/slick/slick.js"></script>
+
+  <!-- Slick 홈페이지에서 cdn으로 사용하기 -->
+  <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+
+  <style>
+    body{
+      background-color: rgb(241, 181, 228);
+      margin: 0;
+    }
+    .myslider{
+      width: 800px;
+      margin: auto;
+    }
+    .myslider div{
+      border: 1px solid #000;
+      height: 300px;
+      background-color: #ddd;
+      font-size: 30px;
+    }
+    .myslider .slick-arrow{
+      border: 1px solid #000;
+      display: none !important;
+    }
+    .myslider .slick-dots{
+      border: 1px solid #000;
+      /* display: none !important; */
+      bottom: 0;
+    }
+
+    @media (max-width: 768px){
+      .myslider{
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="myslider">
+    <div>Content #01</div>
+    <div>Content #02</div>
+    <div>Content #03</div>
+    <div>Content #04</div>
+    <div>Content #05</div>
+    <div>Content #06</div>
+    <div>Content #07</div>
+    <div>Content #08</div>
+    <div>Content #09</div>
+    
+  </div>
+
+  <script>
+    $('.myslider').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      speed: 500,
+      fade: false,
+      cssEase: 'linear',
+      dots: true,
+      responsive: [
+      {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+      },
+      {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+      },
+      {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+      ]
+    });
+  </script>
+</body>
+</html>
